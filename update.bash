@@ -1,5 +1,5 @@
-rm -rf catkin_ws/
-rm -rf temporary/
-git stash && git pull && git stash pop
-sudo chmod +x make_workspace
-./make_workspace
+git stash 
+git pull origin main 
+git stash pop
+sudo chmod +x ~/macbot/make_workspace.bash
+sh ~/macbot/make_workspace.bash
