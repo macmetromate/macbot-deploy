@@ -1,0 +1,16 @@
+[Bookmarks]
+SubRep=MacBot
+ImgNum=63
+Connect to MacBot01= #123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2201%#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot02=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2202#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot03=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2203#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot04=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2204#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot05=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2205#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot06=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2206#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot07=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2207#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot08=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2208#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot09=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2209#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot10=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2210#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+Connect to MacBot11=#123#10%0__PIPE__Bash%%ssh -L 5902:localhost:5902 jnano@172.26.40.9 -p 2211#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+View Desktop=#143#5%localhost%5902%-1%0%%%%%-1%-1%0%jnano%0%%1080%%#MobaFont%10%0%0%-1%15%236,236,236%30,30,30%180,180,192%0%-1%0%%xterm%-1%0%_Std_Colors_0_%80%24%0%1%-1%<none>%%0%0%-1%-1#0# #-1
+
