@@ -2,7 +2,7 @@
 sudo apt install lxde
 sudo apt install tigervnc-standalone-server tigervnc-xorg-extension
 
-# Sometimes it fails to create this file
+# Sometimes it fails to create this file, this is needed to use lxde within vnc
 touch ~/.vnc/xstartup
 echo "unset SESSION_MANAGER" > ~/.vnc/xstartup
 echo "unset DBUS_SESSION_BUS_ADDRESS" >> ~/.vnc/xstartup
@@ -11,13 +11,11 @@ echo "startlxde &" >> ~/.vnc/xstartup
 
 
 echo "PLEASE SET YOUR VNC ACCESS CREDENTIALS"
+# Will prompt for credentials
 vncserver
-mkdir -p ~/.config/autostart
-touch ~/.config/autostart/autostart_vnc.bash
-echo "#! /bin/sh " > ~/.config/autostart/autostart_vnc.bash
-echo "vncserver :2 -depth 24 -geometry 1920x1080" >> ~/.config/autostart/autostart_vnc.bash
-chmod +x ~/.config/autostart/autostart_vnc.bash
-ln ~/.config/autostart/autostart_vnc.bash ~
-sudo wget --output-document=/usr/share/backgrounds/MacBotWallpaper.png https://github.com/sokacza/macbot/raw/main/docs/Labs/Wallpapers/MARCWallpaper.png
-sudo reboot
+# Quietly checking and launching the vnc server upon ssh connection
+echo "vncserver :2 -depth 24 -geometry 1920x1080 > /dev/null" >> ~/.bashrc
 
+sudo wget --output-document=/usr/share/backgrounds/MacBotWallpaper.png https://github.com/septmacbot/macbot/raw/main/docs/Labs/Wallpapers/MARCWallpaper.png
+sudo reboot
+# Must swap out wallpaper manually because vnc and desktop modes use different desktop environments

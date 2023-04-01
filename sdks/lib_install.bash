@@ -10,7 +10,7 @@ sudo apt -y install python3 python3-pip python-can python-can-isotp
 sudo python3 -m pip install rospkg
 
 #   lib_ydldiar dependencies
-sudo apt -y install cmake pkg-config swig python3 python3-pip
+sudo apt -y install cmake pkg-config swig python3 python3-pip cmake libsdl2-dev g++ 
 
 #   lib_realsense dependencies
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
