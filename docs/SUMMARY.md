@@ -2,7 +2,7 @@
 
 * [❔ About](README.md)
 * [💾 Setup](setup.md)
-* [Status](page-1.md)
+* [🌐 Status](page-1.md)
 * [🔌 Connect](connect.md)
 * [🗃 GitHub](https://github.com/septmacbot/macbot-deploy)
 

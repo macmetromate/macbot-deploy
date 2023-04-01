@@ -2,9 +2,7 @@
 
 In 2023, the software and documentation was aggregated into the following GitHub repo:
 
-{% embed url="https://github.com/sokacza/macbot/tree/main" %}
-MacBot Project Repository
-{% endembed %}
+{% embed url="https://github.com/septmacbot/macbot-deploy" %}
 
 When setting up a MacBot, do the following:
 
@@ -16,5 +14,4 @@ When setting up a MacBot, do the following:
 * Clone the macbot repo into the /home/jnano user directory
 * Install ROS melodic using **melodic\_install.bash**
 * If the MacBot has access to the internet, run **install.bash**
-* If the MacBot does not have access to the internet, run **offline\_install.bash**
 * A ROS workspace should be created called **macbot\_ws**
