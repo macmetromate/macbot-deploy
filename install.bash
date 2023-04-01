@@ -17,7 +17,7 @@ sudo apt -y install ros-melodic-teleop-twist-keyboard
 sudo apt -y install ros-melodic-scan-tools
 sudo apt install ros-melodic-turtlesim 
 
-sudo echo "Installed packages" >> ./install_log.txt
+sudo echo "Installed packages" >> ~/macbot/install_log.txt
 
 # SDK's
 chmod +x ~/macbot/sdks/lib_install.bash
@@ -29,17 +29,17 @@ cd ~/macbot/macbot_ws/src
 catkin_init_workspace
 cd ..
 catkin_make
+echo "First build" >> ~/macbot/install_log.txt
 sudo echo "source ~/macbot/macbot_ws/devel/setup.bash" >> ~/.bashrc
 #    Add packages
-cd ~/macbot/ros
-sh install_dependencies.bash
+chmod +x ~/macbot/ros/ros_workspace_setup.bash
+sh ~/macbot/ros/ros_workspace_setup.bash
 #    Full run
-cd ~/macbot/macbot_ws/src
-catkin_init_workspace
-cd ..
+echo "Second build" >> ~/macbot/install_log.txt
+cd ~/macbot/macbot_ws
 catkin_make
 
-echo "DONE!" >> ./install_log.txt
+echo "DONE!" >> ~/macbot/install_log.txt
 
 
 

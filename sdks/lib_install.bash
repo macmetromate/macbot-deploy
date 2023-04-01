@@ -48,5 +48,5 @@ cmake ../ -DBUILD_EXAMPLES=true
 sudo make uninstall && make clean && make && sudo make install
 
 
-cd ~/macbot/sdks
+cd ~/macbot
 

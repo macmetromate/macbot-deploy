@@ -1,4 +1,6 @@
 #! /bin/sh
+
+
 sudo apt install lxde
 sudo apt install tigervnc-standalone-server tigervnc-xorg-extension
 

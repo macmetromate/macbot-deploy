@@ -1,4 +1,4 @@
-#! bin/bash
+#! /bin/bash
 
 #   Ensure that SSH keys are configured correctly on your system before running
 
