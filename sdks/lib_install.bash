@@ -13,6 +13,10 @@ sudo python3 -m pip install rospkg
 sudo apt -y install cmake pkg-config swig python3 python3-pip cmake libsdl2-dev g++ 
 
 #   lib_realsense dependencies
+sudo python3 -m pip install opencv-python
+sudo ln -s /usr/include/opencv4/opencv2/ /usr/include/opencv
+sudo ln -s /usr/include/opencv4/opencv2/ /usr/include/opencv2
+
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
 sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
 sudo apt -y install librealsense2-dkms librealsense2-utils librealsense2-dev librealsense2-dbg 
@@ -45,7 +49,8 @@ cd ~/macbot/sdks/lib_realsense
 mkdir build
 cd build
 cmake ../ -DBUILD_EXAMPLES=true
-sudo make uninstall && make clean && make && sudo make install
+make
+sudo make install
 
 
 cd ~/macbot

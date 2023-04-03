@@ -14,6 +14,12 @@ mv ../macbot_ws/src/navigation_msgs ../macbot_ws/src/navigation_msgs
 unzip -q ydlidar_ros_driver.zip -d ../macbot_ws/src
 mv ../macbot_ws/src/ydlidar_ros_driver-master ../macbot_ws/src/ydlidar_ros
 
+unzip -q realsense_ros_driver.zip -d ../macbot_ws/src
+mv ../macbot_ws/src/realsense_ros_driver-master ../macbot_ws/src/realsense_ros
+
+sudo apt -y install ros-melodic-ddynamic-reconfigure
+sudo ln -s /usr/include/opencv4/opencv2/ /usr/include/opencv
+
 #unzip -q geometry2.zip -d ../macbot_ws/src
 #mv ../macbot_ws/src/geometry2 ../macbot_ws/src/geometry2
 

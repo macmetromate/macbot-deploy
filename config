@@ -1,0 +1,6 @@
+#    SSH Keys
+
+Host github-macbot-deploy
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/macbot_deploy/macbot_deploy_rsa
