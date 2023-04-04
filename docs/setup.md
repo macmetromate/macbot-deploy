@@ -50,3 +50,45 @@ ssh -L 5902:localhost:5902 jnano@router_ip -p 22##
 
 <figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
+## Syncing Changes to GitHub
+
+Run the following command with default options to generate the \~/.ssh directory:
+
+```bash
+ssh-keygen
+```
+
+Navigate to \~/.ssh and create a file called **config** with no file extension. Include the following configuration in this file.
+
+```bash
+#    MacBot SSH Profile
+Host github-macbot-deploy
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/macbot_deploy/macbot_deploy_rsa
+ash
+```
+
+{% file src=".gitbook/assets/config" %}
+
+Create the IdentityFile directory specified in the configuration script.
+
+```
+mkdir ~/.ssh/macbot_deploy
+```
+
+Generate an SSH key in this new directory, with the exact name specified in the configuration script. Both a public and private key will be created.
+
+```
+ssh-keygen
+/home/jnano/.ssh/macbot_deploy/macbot_deploy_rsa
+```
+
+View the public key and add it to your GitHub Repo deploy keys.
+
+```
+gedit ~/.ssh/macbot_deploy/macbot_deploy_rsa.pub
+```
+
+<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
