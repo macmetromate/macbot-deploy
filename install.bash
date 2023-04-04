@@ -42,6 +42,6 @@ catkin_make
 echo "DONE!" >> ~/macbot/install_log.txt
 
 
-
+ln ~/macbot/launcher/launcher.py ~/Desktop
 
 

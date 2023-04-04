@@ -1,1 +1,0 @@
-gnome-terminal --tab --title="tab 1" --command="bash -c 'cd /etc; ls; $SHELL'" --tab --title="tab 2" --command="bash -c 'cd ~; ls; $SHELL'" --tab --title="tab 3" --command="bash -c 'cd ~/temp3; ls; $SHELL'"
