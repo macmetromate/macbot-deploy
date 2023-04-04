@@ -66,7 +66,7 @@ Host github-macbot-deploy
     HostName github.com
     User git
     IdentityFile ~/.ssh/macbot_deploy/macbot_deploy_rsa
-ash
+
 ```
 
 {% file src=".gitbook/assets/config" %}
