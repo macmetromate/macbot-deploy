@@ -11,6 +11,7 @@ sudo apt -y install perl
 sudo apt -y install wget 
 sudo apt -y install libsdl-image1.2-dev
 sudo apt -y install libsdl-dev
+sudo apt -y install ros-melodic-tf2-sensor-msgs
 
 # Additional ROS packages
 sudo apt -y install ros-melodic-teleop-twist-keyboard 
