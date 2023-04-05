@@ -16,6 +16,7 @@ sudo apt -y install libsdl-dev
 sudo apt -y install ros-melodic-teleop-twist-keyboard 
 sudo apt -y install ros-melodic-scan-tools
 sudo apt install ros-melodic-turtlesim 
+sudo apt -y install ros-melodic-gmapping
 
 sudo echo "Installed packages" >> ~/macbot/install_log.txt
 

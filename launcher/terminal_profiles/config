@@ -210,7 +210,7 @@
       type = HPaned
     [[[terminal10]]]
       title = "(10) - GAZEBO"
-      command = sleep 10;roslaunch macbot_gazebo default.launch world:=maze rviz_config:=mapping;bash;
+      command = sleep 30;roslaunch macbot_gazebo default.launch world:=maze rviz_config:=mapping;bash;
       order = 0
       parent = child9
       profile = default
@@ -218,7 +218,7 @@
       uuid = b3f7c144-7dca-49f9-8b40-5f8e806c470f
     [[[terminal11]]]
       title = "(11) - GMAPPING"
-      command = sleep 5;roslaunch macbot_navigation gmap.launch;bash;
+      command = sleep 40;roslaunch macbot_navigation gmap.launch;bash;
       order = 1
       parent = child9
       profile = default
@@ -226,7 +226,7 @@
       uuid = aec27024-3cb9-46bf-b861-50e38cc794fb
     [[[terminal4]]]
       title = "(4) - ROSCORE"
-      command = roscore;bash;
+      command = sleep 10;roscore;bash;
       order = 0
       parent = child3
       profile = default
@@ -248,7 +248,7 @@
       uuid = c5aee549-33e6-477e-a10e-660302e4f8e1
     [[[terminal8]]]
       title = "(8) - TELEOP"
-      command = roslaunch macbot_gazebo teleop.launch;bash;
+      command = sleep 20;roslaunch macbot_gazebo teleop.launch;bash;
       order = 1
       parent = child2
       profile = default
