@@ -49,8 +49,8 @@ sudo chmod -R 0777 ~/macbot/sdks/lib_realsense/
 cd ~/macbot/sdks/lib_realsense
 sudo mkdir build
 cd build
-cmake ../ -DBUILD_EXAMPLES=true
-make
+sudo cmake ../ -DBUILD_EXAMPLES=true
+sudo make
 sudo make install
 
 
