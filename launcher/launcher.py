@@ -6,6 +6,30 @@ workingDirectory = os.getcwd()
 os.system(f"mkdir -p ~/.config/terminator")
 os.system(f"cp ~/macbot/launcher/terminal_profiles/config ~/.config/terminator/")
 
+golinkCanInterfaceInit = """
+modprobe can;
+modprobe can-raw;
+modprobe slcan;
+slcand -s5 -S2000000 /dev/ttyUSB0 can0;
+sleep 1;
+ifconfig can0 up;
+echo " ";
+ifconfig can0;
+echo " ";
+echo "MDR1 Bus Init Finished";
+"""
+
+ydlidarInterfaceInit = """
+echo  'KERNEL=="ttyUSB*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE:="0666", GROUP:="dialout",  SYMLINK+="ydlidar"' >/etc/udev/rules.d/ydlidar.rules;
+echo  'KERNEL=="ttyACM*", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", MODE:="0666", GROUP:="dialout",  SYMLINK+="ydlidar"' >/etc/udev/rules.d/ydlidar-V2.rules;
+echo  'KERNEL=="ttyUSB*", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", MODE:="0666", GROUP:="dialout",  SYMLINK+="ydlidar"' >/etc/udev/rules.d/ydlidar-2303.rules;
+service udev reload;
+sleep 2;
+service udev restart;
+"""
+
+
+
 while True:
     choice = input("""
     -----------------------------------------
@@ -16,17 +40,19 @@ while True:
 
      1 - Mapping Simulation
 
-     2 - Mapping Physical
+     2 - Mapping Physical (errors starting hardware devices)
 
-     3 - Path Planning Simulation
+     3 - Path Planning Simulation (Requires Testing)
 
-     4 - Path Planning Physical
+     4 - Path Planning Physical (Requires Testing)
 
      A - View Documentation
 
      B - GitHub SSH Setup
      
      C - Install MacBot Project
+
+     D - Update from GitHub
 
 
 
@@ -37,8 +63,13 @@ while True:
     if(choice == "1"):
         os.system(f"terminator -l \"MappingSim\"")
     elif(str(choice) == "2"):
-        os.system(f"sudo sh ~/macbot/macbot_ws/src/macbot_ros/macbot_physical/script/golink-bus-init.sh")
-        os.system(f"sudo sh ~/macbot/macbot_ws/src/ydlidar_ros/startup/initenv.sh")
+        print("\n---------------------------------\nDefault Hardware Configuration \n---------------------------------")
+        print("   - CAN Interface: USB0\n   - YDLiDAR Interface: USB1\n")
+        input("Please disconnect and reconnect the lidar then press <enter>.")
+        os.system(golinkCanInterfaceInit)
+        os.system(ydlidarInterfaceInit)
+        os.system("ls -l | grep USB")
+        input("Press <enter> to launch application: ")
         os.system(f"terminator -l \"MappingPhys\"")
     elif(str(choice) == "3"):
         os.system(f"terminator -l \"PathPlanSim\"")
@@ -61,8 +92,13 @@ while True:
         os.system("echo ''")
         os.system(f"echo 'GitHub Remote URL: git@github-macbot-deploy:septmacbot/macbot-deploy.git'")
     elif(str(choice) == "C"):
-        os.system(f"sh ~/macbot/install.bash")
+        os.system(f"sh ~/macbot/launcher/bash/install.bash")
+    elif(str(choice) == "D"):
+        os.system("sudo rm -Rf ~/macbot/macbot_ws")
+        os.system("sudo rm -Rf ~/macbot/sdks/lib_golink_env/")
+        os.system("sudo rm -Rf ~/macbot/sdks/lib_realsense/")
+        os.system("sudo rm -Rf ~/macbot/sdks/lib_ydlidar/")
+        os.system(f"sh ~/macbot/launcher/bash/pull_from_github.bash")
+        os.system("echo 'Please run ( C - Install MacBot Project )")
 
 
-
-    
