@@ -1,3 +1,7 @@
 install_log.txt
 macbot_ws
 temporary
+sdks/lib_golink_env/
+sdks/lib_realsense/
+sdks/lib_ydlidar/
+
