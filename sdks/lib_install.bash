@@ -45,7 +45,7 @@ sudo make install
 
 #   lib_realsense install
 unzip ~/macbot/sdks/lib_realsense
-chmod -R 0777 ~/macbot/sdks/lib_realsense
+chmod -R 0777 ~/macbot/sdks/lib_realsense/*
 cd ~/macbot/sdks/lib_realsense
 mkdir build
 cd build
