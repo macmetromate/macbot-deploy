@@ -27,7 +27,7 @@ sudo apt -y update && sudo apt -y upgrade
 
 
 #   lib_golink_env install
-unzip ~/macbot/sdks/lib_golink_env 
+unzip ~/macbot/sdks/lib_golink_env.zip
 cd ~/macbot/sdks/lib_golink_env/extern/pybinn
 sudo python3 setup.py install
 cd ~/macbot/sdks/lib_golink_env/extern/python-can-isotp
@@ -35,7 +35,7 @@ sudo python3 setup.py install
 echo "REMEMBER TO START THE CAN0 INTERFACE BEFORE STARTING"
 
 #   lib_ydldiar install
-unzip ~/macbot/sdks/lib_ydlidar
+unzip ~/macbot/sdks/lib_ydlidar.zip
 cd ~/macbot/sdks/lib_ydlidar
 mkdir build/
 cd build/
@@ -44,10 +44,10 @@ make
 sudo make install
 
 #   lib_realsense install
-unzip ~/macbot/sdks/lib_realsense
-chmod -R 0777 ~/macbot/sdks/lib_realsense/*
+unzip ~/macbot/sdks/lib_realsense.zip
+sudo chmod -R 0777 ~/macbot/sdks/lib_realsense/
 cd ~/macbot/sdks/lib_realsense
-mkdir build
+sudo mkdir build
 cd build
 cmake ../ -DBUILD_EXAMPLES=true
 make
