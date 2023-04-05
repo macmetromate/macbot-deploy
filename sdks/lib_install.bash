@@ -3,8 +3,6 @@
 sudo apt -y update && sudo apt -y upgrade
 cd ~/macbot/sdks
 
-
-
 #   lib_golink_env dependencies
 sudo apt -y install python3 python3-pip python-can 
 sudo python3 -m pip install rospkg
@@ -27,31 +25,27 @@ sudo apt -y update && sudo apt -y upgrade
 
 
 #   lib_golink_env install
-unzip ~/macbot/sdks/lib_golink_env.zip
-cd ~/macbot/sdks/lib_golink_env/extern/pybinn
-sudo python3 setup.py install
-cd ~/macbot/sdks/lib_golink_env/extern/python-can-isotp
-sudo python3 setup.py install
+unzip -q ~/macbot/sdks/lib_golink_env.zip -d ~/macbot/sdks
+sudo python3 ~/macbot/sdks/lib_golink_env/extern/pybinn/setup.py install
+sudo python3 ~/macbot/sdks/lib_golink_env/extern/python-can-isotp/setup.py install 
 echo "REMEMBER TO START THE CAN0 INTERFACE BEFORE STARTING"
 
 #   lib_ydldiar install
-unzip ~/macbot/sdks/lib_ydlidar.zip
-cd ~/macbot/sdks/lib_ydlidar
-mkdir build/
-cd build/
+unzip -q ~/macbot/sdks/lib_ydlidar.zip -d ~/macbot/sdks
+mkdir ~/macbot/sdks/lib_ydlidar/build/
+cd ~/macbot/sdks/lib_ydlidar/build/
 cmake ..
 make
 sudo make install
 
 #   lib_realsense install
-unzip ~/macbot/sdks/lib_realsense.zip
+unzip -q ~/macbot/sdks/lib_realsense.zip -d ~/macbot/sdks
 sudo chmod -R 0777 ~/macbot/sdks/lib_realsense/
-cd ~/macbot/sdks/lib_realsense
-sudo mkdir build
-cd build
-sudo cmake ../ -DBUILD_EXAMPLES=true
-sudo make
-sudo make install
+sudo mkdir ~/macbot/sdks/lib_realsense/build
+cd ~/macbot/sdks/lib_realsense/build
+#sudo cmake ..
+#sudo make
+#sudo make install
 
 
 cd ~/macbot

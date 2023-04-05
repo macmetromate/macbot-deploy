@@ -3,7 +3,7 @@
 touch ~/macbot/install_log.txt
 echo "Start install" > ~/macbot/install_log.txt
 
-mkdir -p macbot_ws/src
+mkdir -p ~/macbot/macbot_ws/src
 
 # For melodic and general
 sudo apt -y install git 
@@ -45,5 +45,5 @@ echo "DONE!" >> ~/macbot/install_log.txt
 
 ln ~/macbot/launcher/launcher.py ~/Desktop
 ln ~/macbot/launcher/launcher.py ~/macbot
-
+sudo apt -y install terminator
 
