@@ -1,6 +1,6 @@
 # Table of contents
 
-* [❔ About](README.md)
+* [❔ About:](README.md)
 * [💾 Setup](setup.md)
 * [🌐 Status](page-1.md)
 * [🔌 Connect](connect.md)
