@@ -15,7 +15,7 @@ unzip -q ~/macbot/ros/ydlidar_ros_driver.zip -d ~/macbot/macbot_ws/src
 mv ~/macbot/macbot_ws/src/ydlidar_ros_driver-master ~/macbot/macbot_ws/src/ydlidar_ros
 
 unzip -q ~/macbot/ros/realsense_ros_driver.zip -d ~/macbot/macbot_ws/src
-mv ~/macbot/macbot_ws/src/realsense_ros_driver-master ~/macbot/macbot_ws/src/realsense_ros
+mv ~/macbot/macbot_ws/src/realsense_ros_driver ~/macbot/macbot_ws/src/realsense_ros
 
 sudo apt -y install ros-melodic-ddynamic-reconfigure
 sudo ln -s /usr/include/opencv4/opencv2/ /usr/include/opencv
