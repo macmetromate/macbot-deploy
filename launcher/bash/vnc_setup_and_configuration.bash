@@ -18,6 +18,6 @@ vncserver
 # Quietly checking and launching the vnc server upon ssh connection
 echo "vncserver :2 -depth 24 -geometry 1920x1080 > /dev/null" >> ~/.bashrc
 
-sudo wget --output-document=/usr/share/backgrounds/MacBotWallpaper.png https://github.com/septmacbot/macbot/raw/main/docs/Labs/Wallpapers/MARCWallpaper.png
+# sudo wget --output-document=/usr/share/backgrounds/MacBotWallpaper.png https://github.com/septmacbot/macbot/raw/main/docs/Labs/Wallpapers/MARCWallpaper.png
 sudo reboot
 # Must swap out wallpaper manually because vnc and desktop modes use different desktop environments
