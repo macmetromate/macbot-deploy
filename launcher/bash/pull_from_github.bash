@@ -12,7 +12,7 @@
 #echo "    name = $COMPUTER_NAME" >> "$GITCONFIG_FILE"
 #echo "    email = $EMAIL" >> "$GITCONFIG_FILE"
 # Display success message
-echo "Git configuration set successfully."
+# echo "Git configuration set successfully."
 
 # this is for pulling
 cd ~/macbot
