@@ -19,6 +19,7 @@ mv ~/macbot/macbot_ws/src/realsense_ros_driver ~/macbot/macbot_ws/src/realsense_
 
 sudo apt -y install ros-melodic-ddynamic-reconfigure
 sudo ln -s /usr/include/opencv4/opencv2/ /usr/include/opencv
+# the ln -s line can not be run, erro rin installation
 
 #unzip -q geometry2.zip -d ../macbot_ws/src
 #mv ../macbot_ws/src/geometry2 ../macbot_ws/src/geometry2
