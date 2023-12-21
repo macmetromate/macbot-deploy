@@ -2,8 +2,8 @@
 
 #   Ensure that SSH keys are configured correctly on your system before running
 # Need to create .git config by moein
-name=$(hostname)
-email="septmacbot@gmail.com"
+COMPUTER_NAME=$(hostname)
+EMAIL="septmacbot@gmail.com"
 
 GITCONFIG_FILE="$HOME/.gitconfig"
 
