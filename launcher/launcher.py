@@ -54,6 +54,8 @@ while True:
      
      C - Install MacBot Project (install ROS and set the workspace)
 
+     C1 - Install MacBot Project (install ROS and set the workspace)
+
      D - Update from GitHub
 
 
@@ -97,6 +99,8 @@ while True:
         os.system("sudo git clone https://github.com/septmacbot/macbot-deploy.git /home/jnano/macbot")
     elif(str(choice) == "C"):
         os.system(f"sh ~/macbot/launcher/bash/install.bash")
+    elif(str(choice) == "C1"):
+        os.system(f"sh ~/macbot/launcher/bash/vnc_setup_and_configuration.bash")
     elif(str(choice) == "D"):
         os.system("sudo rm -Rf ~/macbot/macbot_ws")
         os.system("sudo rm -Rf ~/macbot/sdks/lib_golink_env/")
