@@ -50,9 +50,9 @@ while True:
 
      B - GitHub SSH Setup
      
-     B1 - Clone Macbot from github (initial setup)
+     B1 - Clone Macbot from github (initial setup, all MacBot files)
      
-     C - Install MacBot Project
+     C - Install MacBot Project (install ROS and set the workspace)
 
      D - Update from GitHub
 
