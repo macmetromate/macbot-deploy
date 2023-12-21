@@ -54,7 +54,7 @@ while True:
      
      C - Install MacBot Project (install ROS and set the workspace)
 
-     C1 - Install MacBot Project (install ROS and set the workspace)
+     C1 - Install VNC
 
      D - Update from GitHub
 
