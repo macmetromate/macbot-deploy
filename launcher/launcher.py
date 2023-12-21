@@ -50,6 +50,8 @@ while True:
 
      B - GitHub SSH Setup
      
+     B1 - Clone Macbot from github (initial setup)
+     
      C - Install MacBot Project
 
      D - Update from GitHub
@@ -91,6 +93,8 @@ while True:
         os.system(f"cat ~/.ssh/macbot_deploy/macbot_deploy_rsa.pub")
         os.system("echo ''")
         os.system(f"echo 'GitHub Remote URL: git@github-macbot-deploy:septmacbot/macbot-deploy.git'")
+    elif(str(choice) == "B1"):
+        os.system("sudo git clone https://github.com/septmacbot/macbot-deploy.git /home/jnano/macbot")
     elif(str(choice) == "C"):
         os.system(f"sh ~/macbot/launcher/bash/install.bash")
     elif(str(choice) == "D"):
