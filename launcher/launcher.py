@@ -51,6 +51,8 @@ while True:
      B - GitHub SSH Setup
      
      B1 - Clone Macbot from github (initial setup, all MacBot files)
+
+     B2 - Install ROS Melodic
      
      C - Install MacBot Project (install ROS and set the workspace)
 
@@ -97,6 +99,8 @@ while True:
         os.system(f"echo 'GitHub Remote URL: git@github-macbot-deploy:septmacbot/macbot-deploy.git'")
     elif(str(choice) == "B1"):
         os.system("sudo git clone https://github.com/septmacbot/macbot-deploy.git /home/jnano/macbot")
+    elif(str(choice) == "B2"):
+         os.system(f"sh ~/macbot/ros/ros_melodic_install.bash")
     elif(str(choice) == "C"):
         os.system(f"sh ~/macbot/launcher/bash/install.bash")
     elif(str(choice) == "C1"):
