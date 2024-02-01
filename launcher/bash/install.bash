@@ -3,7 +3,7 @@
 touch ~/macbot/install_log.txt
 echo "Start install" > ~/macbot/install_log.txt
 
-mkdir -p ~/macbot/macbot_ws/src
+sudo mkdir -p ~/macbot/macbot_ws/src
 
 # For melodic and general
 sudo apt -y install git 
