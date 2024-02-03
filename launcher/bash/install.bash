@@ -43,6 +43,8 @@ catkin_make
 
 echo "DONE!" >> ~/macbot/install_log.txt
 
+sudo rosdep fix-permissions
+rosdep update
 
 ln ~/macbot/launcher/launcher.py ~/Desktop
 ln ~/macbot/launcher/launcher.py ~/macbot
