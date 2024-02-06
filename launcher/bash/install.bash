@@ -23,23 +23,27 @@ sudo echo "Installed packages" >> ~/macbot/install_log.txt
 
 # SDK's
 chmod +x ~/macbot/sdks/lib_install.bash
-sh ~/macbot/sdks/lib_install.bash
+sudo sh ~/macbot/sdks/lib_install.bash
 
 # ROS 
 #    Dry run
 cd ~/macbot/macbot_ws/src
-catkin_init_workspace
+sudo /bin/bash -c 'source /opt/ros/melodic/setup.bash; catkin_init_workspace'
+
 cd ..
-catkin_make
+sudo /bin/bash -c 'source /opt/ros/melodic/setup.bash; catkin_make'
+
 echo "First build" >> ~/macbot/install_log.txt
 sudo echo "source ~/macbot/macbot_ws/devel/setup.bash" >> ~/.bashrc
 #    Add packages
 chmod +x ~/macbot/ros/ros_workspace_setup.bash
-sh ~/macbot/ros/ros_workspace_setup.bash
+sudo sh ~/macbot/ros/ros_workspace_setup.bash
+
+
 #    Full run
 echo "Second build" >> ~/macbot/install_log.txt
 cd ~/macbot/macbot_ws
-catkin_make
+sudo /bin/bash -c 'source /opt/ros/melodic/setup.bash; catkin_make'
 
 echo "DONE!" >> ~/macbot/install_log.txt
 

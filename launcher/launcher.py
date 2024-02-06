@@ -100,11 +100,11 @@ while True:
     elif(str(choice) == "B1"):
         os.system("sudo git clone https://github.com/septmacbot/macbot-deploy.git /home/jnano/macbot")
     elif(str(choice) == "B2"):
-         os.system(f"sh ~/macbot/ros/ros_melodic_install.bash")
+         os.system(f"sudo sh ~/macbot/ros/ros_melodic_install.bash")
     elif(str(choice) == "C"):
-        os.system(f"sh ~/macbot/launcher/bash/install.bash")
+        os.system(f"sudo sh ~/macbot/launcher/bash/install.bash")
     elif(str(choice) == "C1"):
-        os.system(f"sh ~/macbot/launcher/bash/vnc_setup_and_configuration.bash")
+        os.system(f"sudo sh ~/macbot/launcher/bash/vnc_setup_and_configuration.bash")
     elif(str(choice) == "D"):
         os.system("sudo rm -Rf ~/macbot/macbot_ws")
         os.system("sudo rm -Rf ~/macbot/sdks/lib_golink_env/")
