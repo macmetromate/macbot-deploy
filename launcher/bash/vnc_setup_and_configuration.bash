@@ -9,6 +9,7 @@ sudo touch ~/.vnc/xstartup
 sudo echo "unset SESSION_MANAGER" > ~/.vnc/xstartup
 sudo echo "unset DBUS_SESSION_BUS_ADDRESS" >> ~/.vnc/xstartup
 sudo echo "startlxde &" >> ~/.vnc/xstartup
+sudo cp ~/launcher/bash/xstartup ~/.vnc
 
 
 
