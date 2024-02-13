@@ -5,11 +5,12 @@ sudo apt install lxde
 sudo apt install tigervnc-standalone-server tigervnc-xorg-extension
 
 # Sometimes it fails to create this file, this is needed to use lxde within vnc
-sudo touch ~/.vnc/xstartup
-sudo echo "unset SESSION_MANAGER" > ~/.vnc/xstartup
-sudo echo "unset DBUS_SESSION_BUS_ADDRESS" >> ~/.vnc/xstartup
-sudo echo "startlxde &" >> ~/.vnc/xstartup
-sudo cp ~/macbot/launcher/bash/xstartup ~/.vnc
+mkdir ~/.vnc
+touch ~/.vnc/xstartup
+echo "unset SESSION_MANAGER" > ~/.vnc/xstartup
+echo "unset DBUS_SESSION_BUS_ADDRESS" >> ~/.vnc/xstartup
+echo "startlxde &" >> ~/.vnc/xstartup
+#sudo cp ~/macbot/launcher/bash/xstartup ~/.vnc
 
 
 
