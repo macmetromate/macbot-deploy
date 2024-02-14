@@ -98,7 +98,7 @@ while True:
         os.system("echo ''")
         os.system(f"echo 'GitHub Remote URL: git@github-macbot-deploy:septmacbot/macbot-deploy.git'")
     elif(str(choice) == "B1"):
-        os.system("sudo git clone https://github.com/septmacbot/macbot-deploy.git /home/jnano/macbot")
+        os.system("git clone https://github.com/septmacbot/macbot-deploy.git /home/jnano/macbot")
     elif(str(choice) == "B2"):
          os.system(f"sudo sh ~/macbot/ros/ros_melodic_install.bash")
     elif(str(choice) == "C"):
