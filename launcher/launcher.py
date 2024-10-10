@@ -85,6 +85,9 @@ while True:
         os.system(f"terminator -l \"PathPlanPhys\"")
     elif(str(choice) == "A"):
         os.system("chromium-browser --app=https://sept-macbot.gitbook.io/macbot/")
+    elif(str(choice) == "B0"):
+        os.system(f"sudo hostnamectl set-hostname Macbotxx")
+        os.system(f"sudo reboot")
     elif(str(choice) == "B"):
         os.system(f"mkdir ~/.ssh")
         os.system(f"rm -rf ~/.ssh/*")
