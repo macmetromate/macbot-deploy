@@ -104,7 +104,7 @@ while True:
     elif(str(choice) == "C"):
         os.system(f"sudo sh ~/macbot/launcher/bash/install.bash")
     elif(str(choice) == "C1"):
-        os.system(f"sudo sh ~/macbot/launcher/bash/vnc_setup_and_configuration.bash")
+        os.system(f"chmod +x ~/macbot/launcher/bash/vnc_setup_and_configuration.bash")
     elif(str(choice) == "D"):
         os.system("sudo rm -Rf ~/macbot/macbot_ws")
         os.system("sudo rm -Rf ~/macbot/sdks/lib_golink_env/")
